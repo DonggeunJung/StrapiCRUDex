@@ -6,7 +6,7 @@
 [Image1 : Data list from Strapi DB server]
 
 <div>
-<img src="https://github.com/DonggeunJung/StrapiCRUDex/blob/master/StrapiCRUDex_ScreenShot.png?raw=true width="400px"></img>
+<img src="https://github.com/DonggeunJung/StrapiCRUDex/blob/master/StrapiCRUDex_ScreenShot.png?raw=true width="300px" height="500px"></img>
 </div>
 
 
