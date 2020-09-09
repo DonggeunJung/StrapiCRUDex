@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layout_button">
+
+        <TextView
+            android:id="@+id/tvX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X : "
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/etX"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/etX"/>
+
+        <EditText
+            android:id="@+id/etX"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            app:layout_constraintLeft_toRightOf="@+id/tvX"
+            app:layout_constraintRight_toLeftOf="@+id/tvY"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y :"
+            app:layout_constraintLeft_toRightOf="@+id/etX"
+            app:layout_constraintRight_toLeftOf="@+id/etY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/etY" />
+
+        <EditText
+            android:id="@+id/etY"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            app:layout_constraintLeft_toRightOf="@+id/tvY"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/layout_edit"
+        app:layout_constraintBottom_toTopOf="@+id/lvPlaces">
+
+        <Button
+            android:id="@+id/bnAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:onClick="onBnAdd"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/bnModify"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bnModify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Modify"
+            android:onClick="onBnModify"
+            app:layout_constraintLeft_toRightOf="@+id/bnAdd"
+            app:layout_constraintRight_toLeftOf="@+id/bnDel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bnDel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Del"
+            android:onClick="onBnDel"
+            app:layout_constraintLeft_toRightOf="@+id/bnModify"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/lvPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_button"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
